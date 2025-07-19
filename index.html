@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAMMA WALLET</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Mulish', sans-serif;
+            background-image: url('bgnw.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            width: 100vw; /* Ensures full width */
+        }
+
+        header {
+            background-color:#ffc107;
+            opacity: 0.80;
+            color: white;
+            padding: 0.5rem 2rem; /* Add side padding */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed; /* Fix header at top */
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px; /* Fixed height */
+            z-index: 1000;
+        }
+
+        main {
+            padding-top: 80px; /* Prevent content overlap with fixed header */
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            width: 100vw;
+            background-color: #ffc107;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed; /* Fix footer at bottom */
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px; /* Set a fixed height */
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Mulish:wght@400;500;700&display=swap');
+
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('bgnw.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color:#ffc107;
+            opacity: 0.80;
+            color: white;
+            padding: 0.5rem 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            background-image: url('logo2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .spacer {
+            height: 100vh; /* Creates scroll effect */
+        }
+        .chart-container {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(50px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-family: 'DM Sans', sans-serif;
+        }
+        img{
+            border-radius: 50%;
+        }
+        .about-section {
+            font-family: 'mulish';
+            color: #333;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 2rem;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .category {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            opacity: 0;
+            transition: transform 1s ease-out, opacity 1s ease-out;
+            width: 200px;
+        }
+        .category:nth-child(odd) {
+            transform: translateX(-100%);
+        }
+        .category:nth-child(even) {
+            transform: translateX(100%);
+        }
+        .category.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .category img {
+            width: 100%;
+            height: auto;
+        }
+        .contact {
+            padding: 2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        footer {
+            background-color: #ffc107;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NAMMA WALLET</div>
+        <nav>
+            <a href="#contact"></a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>"Master Your Money, Secure Your Future!"</h1>
+        <img src="nw.jpg" width="300" height="200">
+    </section>
+    <section class="about-section" id="about">
+        <center>
+        <h1>About Us</h1>
+        </center>
+        <p></p> 
+
+            Welcome to Namma wallet, your ultimate personal finance management companion. Our platform empowers you to track expenses, set budgets, and achieve financial goals with ease. Whether you're saving for the future, managing daily expenses, or planning investments, we provide smart insights and tools to help you take control of your finances.  
+            
+            Start your journey toward financial freedom today!.</p>
+    </section>
+    <section class="categories">
+        <div class="category">
+            <img src="savings.jpg" alt="SAVINGS" onclick="window.location.href='index.html'" style="cursor:pointer">
+            <h3>SAVINGS</h3>
+        </div>
+        <div class="category">
+            <img src="exp.jpg" alt="EXPENDETURE" onclick="window.location.href='index.html'" style="cursor:pointer">
+            <h3>EXPENDETURE</h3>
+        </div>
+        <div class="category">
+            <img src="inverstment.jpg" alt="INVESTMENTS" onclick="window.location.href='index.html'" style="cursor:pointer">
+            <h3>INVESTMENTS</h3>
+        </div>
+    </section>
+    <center><h4></h4></center>
+    <section class="about-section" id="about">
+        <center>
+        <h2>INVERSTMENT TIPS:</h2>
+        <p><strong>Diversify Your Portfolio</strong> – Spread your investments across different asset classes (stocks, bonds, real estate, etc.) to reduce risk.</p>
+        <p><strong>Invest for the Long Term</strong> – Patience is key; long-term investments often yield better returns.</p>
+        <p><strong>Start Early, Stay Consistent </strong>– The earlier you invest, the more you benefit from compounding growth.</p>
+        <p><strong>Set Clear Financial Goals </strong>– Define your short-term and long-term objectives before investing.</p>
+        <p><strong>Understand Risk Tolerance</strong> – Choose investments that align with your risk appetite and financial situation.</p>
+        </center>
+    </section>
+    
+    <h2>Monthly Expenditure Trend</h2>
+    <div class="chart-container" id="chartContainer">
+        <canvas id="lineChart"></canvas>
+    </div>
+
+    <script>
+        let chartDrawn = false; // Prevent re-drawing
+        const chartContainer = document.getElementById("chartContainer");
+
+        function createChart() {
+            const ctx = document.getElementById('lineChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Expenditure ($)',
+                        data: [200, 400, 300, 500, 700, 600],
+                        borderColor: '#36a2eb',
+                        backgroundColor: 'rgba(255, 193, 7, 1)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    animation: {
+                        duration: 2000, // Animation starts when visible
+                        easing: 'easeInOutQuart'
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Observer to trigger animation when the graph is in view
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !chartDrawn) {
+                    chartDrawn = true; // Prevent multiple redraws
+                    chartContainer.style.opacity = "1";
+                    chartContainer.style.transform = "translateY(0)";
+                    createChart();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(chartContainer);
+    </script>
+
+    <footer>
+        <p>&copy; NAMMAWALLET.com</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const categories = document.querySelectorAll(".category");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            categories.forEach(category => {
+                observer.observe(category);
+            });
+        });
+    </script>
+</body>
+</html>
